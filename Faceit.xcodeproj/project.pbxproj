@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		052B9B431D5BA37B003F0C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B9B421D5BA37B003F0C4E /* AppDelegate.swift */; };
-		052B9B451D5BA37B003F0C4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B9B441D5BA37B003F0C4E /* ViewController.swift */; };
+		052B9B451D5BA37B003F0C4E /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B9B441D5BA37B003F0C4E /* FaceViewController.swift */; };
 		052B9B481D5BA37B003F0C4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052B9B461D5BA37B003F0C4E /* Main.storyboard */; };
 		052B9B4A1D5BA37B003F0C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052B9B491D5BA37B003F0C4E /* Assets.xcassets */; };
 		052B9B4D1D5BA37B003F0C4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 052B9B4B1D5BA37B003F0C4E /* LaunchScreen.storyboard */; };
+		052B9B561D5BA453003F0C4E /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052B9B551D5BA453003F0C4E /* FaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		052B9B3F1D5BA37B003F0C4E /* Faceit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faceit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		052B9B421D5BA37B003F0C4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		052B9B441D5BA37B003F0C4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		052B9B441D5BA37B003F0C4E /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		052B9B471D5BA37B003F0C4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		052B9B491D5BA37B003F0C4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		052B9B4C1D5BA37B003F0C4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		052B9B4E1D5BA37B003F0C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		052B9B551D5BA453003F0C4E /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		052B9B411D5BA37B003F0C4E /* Faceit */ = {
 			isa = PBXGroup;
 			children = (
-				052B9B421D5BA37B003F0C4E /* AppDelegate.swift */,
-				052B9B441D5BA37B003F0C4E /* ViewController.swift */,
+				052B9B541D5BA38F003F0C4E /* Supporting Files */,
+				052B9B441D5BA37B003F0C4E /* FaceViewController.swift */,
 				052B9B461D5BA37B003F0C4E /* Main.storyboard */,
+				052B9B551D5BA453003F0C4E /* FaceView.swift */,
+			);
+			path = Faceit;
+			sourceTree = "<group>";
+		};
+		052B9B541D5BA38F003F0C4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				052B9B421D5BA37B003F0C4E /* AppDelegate.swift */,
 				052B9B491D5BA37B003F0C4E /* Assets.xcassets */,
 				052B9B4B1D5BA37B003F0C4E /* LaunchScreen.storyboard */,
 				052B9B4E1D5BA37B003F0C4E /* Info.plist */,
 			);
-			path = Faceit;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +107,7 @@
 				TargetAttributes = {
 					052B9B3E1D5BA37B003F0C4E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 39QAE8SJ6Q;
 					};
 				};
 			};
@@ -135,8 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				052B9B451D5BA37B003F0C4E /* ViewController.swift in Sources */,
+				052B9B451D5BA37B003F0C4E /* FaceViewController.swift in Sources */,
 				052B9B431D5BA37B003F0C4E /* AppDelegate.swift in Sources */,
+				052B9B561D5BA453003F0C4E /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,10 +264,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Faceit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.alana.Faceit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Faceit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.cs193p.alana.Faceit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
